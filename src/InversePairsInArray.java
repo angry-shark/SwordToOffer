@@ -6,6 +6,7 @@ public class InversePairsInArray {
     int count;
     private static int[] aux;  //将辅助数组放在方法的外面成为全局数组，避免每调用一次方法都新建一个辅助数组，导致占用内存过大
     public int inversePairs(int [] array) {
+        //数组为空与数组长度为0概念不同，先判断是否为空是因为如果对空数组求长度会报NullPointerException异常
         if(array==null || array.length==0) return 0;
         count=0;
         aux=new int[array.length];  //一次性分配空间，这里必须要初始化容量为a.length，否则下面for循环k<=hi情况下递增到最后会报错NullPointerException
