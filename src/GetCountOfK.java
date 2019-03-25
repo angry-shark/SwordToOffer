@@ -3,6 +3,7 @@
 * */
 public class GetCountOfK {
     public int getNumberOfK(int [] array , int k) {
+        //数组为空与数组长度为0概念不同，先判断是否为空是因为如果对空数组求长度会报NullPointerException异常
         if(array==null || array.length==0) return 0;
         //使用二分查找思想，分别查找数字第一次和最后一次出现的位置
         int firstK=getFirstK(array,k,0,array.length-1);
