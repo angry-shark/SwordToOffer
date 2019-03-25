@@ -5,6 +5,7 @@
 * */
 public class BiggestSumOfSubArray {  //使用动态规划的思想
     public int findGreatestSumOfSubArray(int[] array) {
+        //数组为空与数组长度为0概念不同，先判断是否为空是因为如果对空数组求长度会报NullPointerException异常
         if(array==null || array.length==0) return 0;
         int result=array[0];  //存放最大连续子序列的和
         int currentMax=array[0];  //存放当前元素为末尾元素的子数组的最大值
