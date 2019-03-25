@@ -7,6 +7,7 @@ import java.util.Arrays;
 public class MinKIntegers {
     public ArrayList<Integer> getLeastNumbers(int [] input, int k) {
         ArrayList<Integer> list=new ArrayList<Integer>();
+        //数组为空与数组长度为0概念不同，先判断是否为空是因为如果对空数组求长度会报NullPointerException异常
         if(input==null || input.length==0 || k>input.length) return list;
         Arrays.sort(input);
         for(int i=0;i<k;i++){
