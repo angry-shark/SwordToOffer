@@ -19,6 +19,7 @@ public class DuplicatedIntInArray {
     * 综上，boolean单独存在占4字节，在boolean[]中占1字节。
     * */
     public boolean duplicate(int numbers[],int length,int [] duplication) {
+        //数组为空与数组长度为0概念不同，先判断是否为空是因为如果对空数组求长度会报NullPointerException异常
         if(numbers==null || numbers.length==0) return false;
         boolean[] b=new boolean[length];
         for(int i=0;i<length;i++){
